@@ -3,6 +3,7 @@
 !README.md
 !flake.nix
 !flake.lock
+!starship.toml
 !hosts/
 !hosts/**
 !applications/
