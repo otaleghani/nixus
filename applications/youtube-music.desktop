@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=YouTube Music
+GenericName=Music Player
+Exec=hyprctl dispatch exec "[tile] chromium --app=https://music.youtube.com"
+Type=Application
+StartupNotify=true
+Categories=Music

@@ -5,3 +5,8 @@
 !flake.lock
 !hosts/
 !hosts/**
+!applications/
+!applications/**
+!ghostty/
+!ghostty/**
+

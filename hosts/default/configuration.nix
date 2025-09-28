@@ -147,7 +147,7 @@
     fd
     jq
     xmlstarlet
-    htop
+    btop
     bat
     eza
     rclone

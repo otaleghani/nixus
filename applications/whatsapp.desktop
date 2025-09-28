@@ -1,0 +1,7 @@
+[Desktop Entry]
+Name=WhatsApp Web
+GenericName=Messagging
+Exec=hyprctl dispatch exec "[tile] chromium --app=https://web.whatsapp.com"
+Type=Application
+StartupNotify=true
+Categories=Messagging
