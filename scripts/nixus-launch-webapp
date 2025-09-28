@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+# Launches a webapp, taking the URL as the final argument.
+# The preceding arguments are passed directly to nixus-launch.
+
+if [ "$#" -lt 1 ]; then
+    echo "Usage: $0 [nixus-launch-options...] <URL>"
+    echo "Example: $0 float 500x800 center https://gemini.google.com"
+    exit 1
+fi
+
+URL="${!#}"
+LAUNCH_ARGS=("${@:1:$# - 1}")
+
+nixus-launch "${LAUNCH_ARGS[@]}" "chromium --app='$URL'"

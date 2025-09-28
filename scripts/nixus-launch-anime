@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+WORKSPACE_ID=10
+WINDOW_COUNT=$(hyprctl -j workspaces | jq ".[] | select(.id == $WORKSPACE_ID) | .windows")
+
+launch_anime () {
+  hyprctl dispatch workspace 10
+  nixus-launch-webapp tile "https://myanimelist.net/animelist/styatra?status=1&order=12&order2=0"
+  wait 0.3
+  hyprctl dispatch exec "dolphin ~/truenas/media/Watchlist/"
+}
+
+if [ -z "$WINDOW_COUNT" ]; then
+  launch_anime
+elif [ "$WINDOW_COUNT" -eq 0 ]; then
+  launch_anime
+else
+  hyprctl dispatch workspace 10
+fi
+

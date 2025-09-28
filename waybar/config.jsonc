@@ -1,0 +1,109 @@
+// -*- mode: jsonc -*-
+{
+  "height": 34,
+  "spacing": 8,
+  "layer": "top",
+  "position": "top",
+  "margin-top": 0,
+  "margin-left": 2,
+  "margin-right": 2,
+  "margin-bottom": 0,
+
+  "modules-left": [
+    "custom/logo",
+    "hyprland/workspaces"
+  ],
+
+  "modules-center": [],
+
+  "modules-right": [
+    "group/base",
+    "group/connections",
+    "group/calendar",
+    "group/time",
+  ],
+
+  "group/base": {
+    "name": "base",
+    "modules": [ "pulseaudio" ],
+    "orientation": "inherit",
+  },
+
+  "group/connections": {
+    "name": "connections",
+    "modules": [ "network" ],
+    "orientation": "inherit",
+  },
+
+  "group/calendar": {
+    "name": "calendar",
+    "modules": [ "clock#calendar" ],
+    "orientation": "inherit",
+  },
+
+  "group/time": {
+    "modules": [ "clock" ],
+    "orientation": "inherit",
+  },
+
+  "clock": {
+    "name": "clock",
+    "interval": 1,
+    "format": "<span color=\"#eba0ac\">󱑌  </span>{:%I:%M}",
+    "tooltip": false,
+  },
+
+  "pulseaudio": {
+    "format": "<span color=\"#eba0ac\">{icon}  </span>{volume}",
+    "format-muted": "󰖁",
+    "format-icons": { "default": ["󰕿", "󰖀", "󰕾"],},
+    "tooltip": false,
+  },
+  "backlight": {
+    "on-scroll-up": "brightnessctl set +1%",
+    "on-scroll-down": "brightnessctl set 1%-",
+    "format": "<span color=\"#eba0ac\">{icon}  </span>{percent}",
+    "format-icons": [ "󰃝", "󰃞", "󰃟", "󰃠" ],
+    "tooltip": false,
+  },
+
+  "battery": {
+    "interval": 10,
+    "states": {
+      "warning": 20,
+      "critical": 10,
+    },
+    "format": "<span color=\"#eba0ac\">{icon}  </span>{capacity}%",
+    "format-icons": [ "󰁺", "󰁻", "󰁼", "󰁽", "󰁾", "󰁿", "󰂀", "󰂁", "󰂂", "󰁹" ],
+    "format-full": "<span color=\"#eba0ac\">{icon}  </span>{capacity}%",
+    "format-charging": "<span color=\"#eba0ac\">󰂄  </span>{capacity}%",
+    "tooltip": false,
+  },
+  "network": {
+    "format-disconnected": "<span color=\"#eba0ac\">󰯡  </span>Disconnected",
+    "format-ethernet": "<span color=\"#eba0ac\">󰀂  </span>{ipaddr}",
+    "format-linked": "<span color=\"#eba0ac\">󰖪  </span>{essid}",
+    "format-wifi": "<span color=\"#eba0ac\">󰖩  </span>{essid}",
+    "interval": 1,
+    // "on-click": "pkill rofi || sleep 0.1 && ~/.config/scripts/wifi.sh",
+    "max-lenght": 40,
+    "tooltip": false,
+  },
+  "bluetooth": {
+    "format-off": "<span color=\"#eba0ac\">󰂲  </span>{num_connections}",
+    "format-on": "<span color=\"#eba0ac\">󰂯  </span>{num_connections}",
+    "format-connected": "<span color=\"#eba0ac\">󰂱  </span>{num_connections}",
+    "max-lenght": 40,
+    "tooltip": false,
+  },
+
+  "clock#calendar": { 
+    "format": "<span color=\"#eba0ac\">  </span>{:%d/%m}",
+    "tooltip": false,
+  },
+
+  "custom/logo": {
+    "format": "󱄅",
+    "tooltip": false,
+  }
+}

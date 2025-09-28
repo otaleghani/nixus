@@ -181,7 +181,7 @@
     # Hyprland
     mako
     libnotify
-    rofi-wayland
+    rofi
     wl-clipboard
     cliphist
     waybar
@@ -202,6 +202,7 @@
     text = ''
       # TODO: Add setup script
       echo "Hello from update script!"
+      cp -f ~/.config/zsh/.zshenv ~/
     '';
   };
 }
