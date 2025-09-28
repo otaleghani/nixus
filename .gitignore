@@ -4,3 +4,4 @@
 !flake.nix
 !flake.lock
 !hosts/
+!hosts/**
