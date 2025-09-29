@@ -27,8 +27,8 @@
     jack.enable = true;
   };
 
-  hardware.opengl.enable = true;
-  hardware.opengl.extraPackages = with pkgs; [
+  hardware.graphics.enable = true;
+  hardware.graphics.extraPackages = with pkgs; [
     intel-compute-runtime # Provides OpenCL for modern Intel GPUs (Arc)
     ocl-icd # OpenCL Installable Client Driver loader
   ];
@@ -134,8 +134,15 @@
     wget
     git
     lazygit
-    nil
     uwsm
+
+    # Languages - NIX
+    nil
+
+    # Languages - BASH
+    bash-language-server
+    shfmt
+    shellcheck
 
     # Languages - LUA
     lua-language-server
@@ -200,9 +207,15 @@
 
   system.activationScripts.setup = {
     text = ''
-      # TODO: Add setup script
-      echo "Hello from update script!"
-      cp -f ~/.config/zsh/.zshenv ~/
+      # echo "Adding .zshenv in home folder..."
+      # cp -f ~/.config/zsh/.zshenv ~/
+      #
+      # echo "Creating home folders..."
+      # mkdir -p ~/downloads
+      # mkdir -p ~/workspace
+      # mkdir -p ~/screenshots
+      #
+      # echo "All done!
     '';
   };
 }

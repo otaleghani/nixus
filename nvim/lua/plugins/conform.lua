@@ -9,6 +9,7 @@ return {
 				templ = { "templ" },
 				md = { "mdformat" },
 				nix = { "nixfmt" },
+				sh = { "shfmt" },
 			},
 			format_on_save = {
 				lsp_fallback = true,

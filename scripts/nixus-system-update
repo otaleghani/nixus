@@ -1,4 +1,0 @@
-#!/usr/bin/env bash
-
-hyprctl dispatch exec "[float; size 800 600] ghostty --working-directory='$HOME/.config' --command='bash -c \"sudo nixos-rebuild switch --flake #default; read -p \\\"Press Enter to close...\\\"\"'"
-hyprctl dispatch centerwindow 1

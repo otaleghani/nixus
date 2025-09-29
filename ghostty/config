@@ -42,7 +42,7 @@
 # # Just for example:
 # resize-overlay-duration = 4s 200ms
 
-theme = catppuccin-mocha
+theme = "Catppuccin Mocha"
 shell-integration = zsh
 command = zsh
-font-family = "IosevkaTerm Nerd Font"
+font-family = IosevkaTerm Nerd Font

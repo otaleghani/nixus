@@ -2,6 +2,7 @@ vim.lsp.enable({
 	"lua_ls",
 	"gopls",
 	"nil",
+	"bash-language-server",
 })
 
 -- Diagnostics

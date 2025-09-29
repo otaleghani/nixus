@@ -5,11 +5,11 @@ FILENAME=screenshot_$CURRENT_TIMESTAMP.png
 DIRECTORY=$HOME/screenshots
 SCREENSHOT_PATH=$DIRECTORY/$FILENAME
 
-mkdir -p $DIRECTORY
-grim $SCREENSHOT_PATH
+mkdir -p "$DIRECTORY"
+grim "$SCREENSHOT_PATH"
 
 if [ $? -eq 0 ]; then
-  notify-send -a Screenshot "Capture saved" "You can find your screenshot at $SCREENSHOT_PATH." -i $SCREENSHOT_PATH
+  notify-send -a Screenshot "Capture saved" "You can find your screenshot at $SCREENSHOT_PATH." -i "$SCREENSHOT_PATH"
 else
   notify-send -a Screenshot -u critical "Capture failed" "Time to hunt down the bug..."
 fi

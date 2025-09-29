@@ -3,7 +3,7 @@
 WORKSPACE_ID=10
 WINDOW_COUNT=$(hyprctl -j workspaces | jq ".[] | select(.id == $WORKSPACE_ID) | .windows")
 
-launch_anime () {
+launch_anime() {
   hyprctl dispatch workspace 10
   nixus-launch-webapp tile "https://myanimelist.net/animelist/styatra?status=1&order=12&order2=0"
   wait 0.3
@@ -17,4 +17,3 @@ elif [ "$WINDOW_COUNT" -eq 0 ]; then
 else
   hyprctl dispatch workspace 10
 fi
-

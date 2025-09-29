@@ -12,4 +12,4 @@ fi
 URL="${!#}"
 LAUNCH_ARGS=("${@:1:$# - 1}")
 
-nixus-launch "${LAUNCH_ARGS[@]}" "chromium --app='$URL'"
+nixus-launch.sh "${LAUNCH_ARGS[@]}" "chromium --app='$URL'"

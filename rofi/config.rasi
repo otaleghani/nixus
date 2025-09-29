@@ -193,7 +193,7 @@ configuration {
   }
 }
 
-/* asdf */
+/* Window */
 window {
   background-color: @thm-maroon;
   text-color: @thm-fg;
