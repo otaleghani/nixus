@@ -28,3 +28,11 @@
 !waybar/**
 !zsh/
 !zsh/**
+!btop/
+!btop/**
+!bat/
+!bat/**
+!fzf/
+!fzf/**
+!yazi/
+!yazi/**

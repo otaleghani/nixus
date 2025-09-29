@@ -135,6 +135,7 @@
     git
     lazygit
     uwsm
+    fastfetch
 
     # Languages - NIX
     nil
