@@ -5,7 +5,7 @@ WINDOW_COUNT=$(hyprctl -j workspaces | jq ".[] | select(.id == $WORKSPACE_ID) | 
 
 launch_anime() {
   hyprctl dispatch workspace 10
-  nixus-launch-webapp tile "https://myanimelist.net/animelist/styatra?status=1&order=12&order2=0"
+  nixus-launch-webapp.sh tile "https://myanimelist.net/animelist/styatra?status=1&order=12&order2=0"
   wait 0.3
   hyprctl dispatch exec "dolphin ~/truenas/media/Watchlist/"
 }
