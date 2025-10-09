@@ -1,4 +1,7 @@
-## To reproduce:
+# Nixus
+
+## Step to reproduce
+
 - Clone this repo
 - Create a redirection for zsh
 

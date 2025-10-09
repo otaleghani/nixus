@@ -3,6 +3,9 @@ vim.lsp.enable({
 	"gopls",
 	"nil",
 	"bash-language-server",
+	"templ",
+	"tailwind",
+	"typescript-language-server",
 })
 
 -- Diagnostics

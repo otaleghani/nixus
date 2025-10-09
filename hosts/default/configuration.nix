@@ -55,6 +55,8 @@
     94.237.61.242 test.academy.htb
     94.237.61.242 archive.academy.htb
     94.237.61.242 faculty.academy.htb
+    10.129.71.56 app.inlanefreight.local dev.inlanefreight.local drupal-dev.inlanefreight.local drupal-qa.inlanefreight.local drupal-acc.inlanefreight.local drupal.inlanefreight.local blog.inlanefreight.local
+
   '';
 
   # virtualisation.virtualbox.host.enable = true;
@@ -136,6 +138,12 @@
     lazygit
     uwsm
     fastfetch
+    go
+    gopls
+
+    # environment management
+    # direnv
+    # nix-direnv
 
     # Languages - NIX
     nil

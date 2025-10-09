@@ -34,3 +34,16 @@ map("n", "<leader>bQ", "<Cmd>bdelete!<CR>", { desc = "Force close current buffer
 
 -- LSP diagnostic
 map("n", "<leader>d", "<Cmd>lua vim.diagnostic.open_float()<CR>", opts)
+
+-- Golang if err != nil
+map("n", "<leader>ie", "oif err != nil {\n\treturn err\n}<esc>o", {
+	noremap = true,
+	silent = true,
+	desc = "Insert Go if err != nil block",
+})
+
+-- Restart lsp client
+vim.keymap.set("n", "<leader>rl", function()
+	vim.lsp.stop_client(vim.lsp.get_clients())
+	vim.cmd("edit")
+end, { noremap = true, silent = true, desc = "Restart LSP & Reload File" })
