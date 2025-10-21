@@ -55,8 +55,7 @@
     94.237.61.242 test.academy.htb
     94.237.61.242 archive.academy.htb
     94.237.61.242 faculty.academy.htb
-    10.129.71.56 app.inlanefreight.local dev.inlanefreight.local drupal-dev.inlanefreight.local drupal-qa.inlanefreight.local drupal-acc.inlanefreight.local drupal.inlanefreight.local blog.inlanefreight.local
-
+    10.129.205.30 gitlab.inlanefreight.local support.inlanefreight.local app.inlanefreight.local dev.inlanefreight.local drupal-dev.inlanefreight.local drupal-qa.inlanefreight.local drupal-acc.inlanefreight.local drupal.inlanefreight.local blog.inlanefreight.local app-dev.inlanefreight.local web01.inlanefreight.local jenkins.inlanefreight.local 
   '';
 
   # virtualisation.virtualbox.host.enable = true;
@@ -140,10 +139,8 @@
     fastfetch
     go
     gopls
-
-    # environment management
-    # direnv
-    # nix-direnv
+    taskwarrior
+    litecli
 
     # Languages - NIX
     nil
@@ -204,6 +201,9 @@
     hyprpaper
     hyprpicker
     rose-pine-hyprcursor
+
+    # Work
+    railway
   ];
 
   # programs.mtr.enable = true;

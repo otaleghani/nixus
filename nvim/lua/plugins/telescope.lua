@@ -13,7 +13,7 @@ return {
 				require("telescope.builtin").find_files()
 			end,
 			mode = "n",
-			desc = "Find Files (Root Dir)",
+			desc = "Find files (Root dir)",
 		},
 		{
 			"<leader>/",
@@ -21,7 +21,7 @@ return {
 				require("telescope.builtin").live_grep()
 			end,
 			mode = "n",
-			desc = "Find Files (Root Dir)",
+			desc = "Live grep",
 		},
 		{
 			"<leader>bb",
@@ -29,13 +29,45 @@ return {
 				require("telescope.builtin").buffers()
 			end,
 			mode = "n",
-			desc = "Find open Buffers",
+			desc = "Find open buffers",
+		},
+		{
+			"<leader>s",
+			function()
+				require("telescope.builtin").lsp_document_symbols()
+			end,
+			mode = "n",
+			desc = "Find document symbols",
+		},
+		{
+			"<leader>S",
+			function()
+				require("telescope.builtin").lsp_workspace_symbols()
+			end,
+			mode = "n",
+			desc = "Find project symbols",
 		},
 	},
 	config = function()
 		require("telescope").setup({
 			pickers = {
 				find_files = {
+					theme = "ivy",
+					hidden = "true",
+				},
+				live_grep = {
+					theme = "ivy",
+					hidden = "true",
+				},
+				buffers = {
+					theme = "ivy",
+					hidden = "true",
+				},
+				lsp_document_symbols = {
+					theme = "ivy",
+					hidden = "true",
+				},
+				lsp_workspace_symbols = {
 					theme = "ivy",
 					hidden = "true",
 				},

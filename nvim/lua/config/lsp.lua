@@ -10,12 +10,13 @@ vim.lsp.enable({
 
 -- Diagnostics
 vim.diagnostic.config({
-	-- virtual_lines = true,
-	virtual_text = true,
+	virtual_text = false,
+	virtual_lines = true,
 	underline = true,
 	update_in_insert = false,
 	severity_sort = true,
 	float = {
+		header = false,
 		border = "rounded",
 		source = true,
 	},

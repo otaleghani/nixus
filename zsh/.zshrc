@@ -10,7 +10,7 @@ export FZF_DEFAULT_OPTS=" \
 --color=selected-bg:#45475A \
 --color=border:#6C7086,label:#CDD6F4"
 export COLORTERM="truecolor"
-export PATH="$PATH:$HOME/.config/scripts/"
+export PATH="$PATH:$HOME/.config/scripts/:$HOME/go/bin/"
 
 #### STARTS DOTFILES
 # alias -- dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
